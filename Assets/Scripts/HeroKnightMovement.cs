@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HeroKnightMovement : MonoBehaviour
 {
-
-    public float speed = 5f;
+ 
+    float speed = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,6 @@ public class HeroKnightMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -25,6 +24,5 @@ public class HeroKnightMovement : MonoBehaviour
         pos.y += v * speed * Time.deltaTime;
 
         transform.position = pos;
-
     }
 }
