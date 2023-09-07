@@ -7,32 +7,44 @@ public class VariableExamples : MonoBehaviour
 
     private void Start()
     {
+        //int charisma = 45;
+        //int style = 45;
 
-        string name = "mbappe";
+        //if (charisma <= 0)
+        //{
+        //    Debug.Log("Did you juts come out from a cave?");
+        //}
+        //else if (charisma >= 100 || style >= 100)
+        //{
+        //    Debug.Log("You can date with Angelina");
+        //}else if (charisma >= 70 &&  style >= 50)
+        //{
+        //    Debug.Log("You can date with Sarah");
+        //}else if(charisma <= 40 || style <= 40)
+        //{
+        //    Debug.Log("You can't date with anyone");
+        //}
+        //else
+        //{
+        //    Debug.Log("You can date with Marry");
+        //}
 
-        float goals = 30;
-        float matches = 48;
-        float goalPerMatch = matches / goals;
+        string spell = "resistance";
+        int money = 30;
 
-        //Debug.Log(name + " scored " + goalPerMatch + " per match");
-        //Debug.Log($"{name} scored {goalPerMatch} per match");
+        switch (spell)
+        {
+            case "resistance":
+                Debug.Log("Magically bolster a creature's defences. It receives a +1d4 bonus to Saving Throws.");
+                break;
+            case "fire bolt":
+                Debug.Log("Hurl a mote of fire.");
+                break;
+            default:
+                Debug.Log("Wrong selection");
+                break;
+        }
 
-        Debug.Log($"Can player cast spell{5}?" + CanCastSpell(5, 500));  
-        StoredMana(5);
-
-    }
-
-    bool CanCastSpell(int spellId, float mana)
-    {
-        return true;
-    }
-
-    void StoredMana(int spellId)
-    {
-        float mana = 1000;
-        float usedMmana = spellId * 40;
-        mana -= usedMmana;
-        Debug.Log($"When player used {spellId} spell, remaining mana is: {mana}");
     }
 
 }
