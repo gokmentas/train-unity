@@ -7,27 +7,14 @@ public class VariableExamples : MonoBehaviour
 
     private void Start()
     {
-        ApparenceTime();
-    }
+        Items item1 = new Items("sword", 100, 10);
+        Items item2 = new Items("shield", 30, 20);
 
-    IEnumerator CanBeAlly()
-    {
-        Debug.Log("I will give you 5 seconds");
-        yield return new WaitForSeconds(5);
-        Debug.Log("Attack");
-    }
+        item1.Info();
+        item2.Info();
 
-    bool IsEnnemy = false;
+        Debug.Log($"Worth it to take? {item1.Worth()}");
+        Debug.Log($"Worth it to take? {item2.Worth()}");
 
-    void ApparenceTime()
-    {
-        if (IsEnnemy)
-        {
-            Debug.Log("Attack");
-        }
-        else
-        {  
-            StartCoroutine(CanBeAlly());   
-        }
     }
 }
