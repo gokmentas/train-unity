@@ -27,6 +27,11 @@ public class Items
         set { _weight = value; }
     }
 
+    public Items()
+    {
+
+    }
+
     public Items(string name, int price, int weight)
     {
         Name = name;
@@ -36,7 +41,12 @@ public class Items
 
     public void Info()
     {
-        Debug.Log($"Name: {_name} Price: {_price} Weight: {_weight}");
+        Debug.Log($"Name: {Name} Price: {Price} Weight: {Weight}");
+    }
+
+    public virtual void Discard()
+    {
+        Debug.Log("Item discarded");
     }
 
 }
