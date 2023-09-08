@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class Items
 {
+    
+    private string _name;
+    private int _price;
+    private int _weight;
 
-    string name;
-    int price;
-    float weight;
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public int Price
+    {
+        get { return _price; }
+        set { _price = value; }
+    }
+
+    public int Weight
+    {
+        get { return _weight; }
+        set { _weight = value; }
+    }
 
     public Items(string name, int price, int weight)
     {
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
+        Name = name;
+        Price = price;
+        Weight = weight;
     }
 
     public void Info()
     {
-        Debug.Log($"{name} {price} {weight}");
-    }
-
-    public bool Worth()
-    {
-        return (price >= weight * 10);
+        Debug.Log($"Name: {_name} Price: {_price} Weight: {_weight}");
     }
 
 }

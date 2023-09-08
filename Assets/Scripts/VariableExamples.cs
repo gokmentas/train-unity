@@ -5,16 +5,22 @@ using UnityEngine;
 public class VariableExamples : MonoBehaviour
 {
 
+    Items sword;
+    Items shield;
+
     private void Start()
     {
-        Items item1 = new Items("sword", 100, 10);
-        Items item2 = new Items("shield", 30, 20);
 
-        item1.Info();
-        item2.Info();
+        sword = new Items("Battlecry", 100, 10);
+        shield = new Items("Sunlight", 50, 30);
 
-        Debug.Log($"Worth it to take? {item1.Worth()}");
-        Debug.Log($"Worth it to take? {item2.Worth()}");
+        Debug.Log(sword.Price);
+        sword.Price = 75;
+        sword.Info();
+
+        Debug.Log(shield.Weight);
+        shield.Weight = 100;
+        shield.Info();
 
     }
 }
